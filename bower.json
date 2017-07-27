@@ -1,0 +1,30 @@
+{
+  "name": "projetofinalcertificado",
+  "description": "Projeto final de conclusão do curso Certificação Bootstrap Ministrado por Keven Jesus",
+  "main": "index.js",
+  "authors": [
+    "Guilherme Chinaglia"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "certificacao",
+    "bootstrap",
+    "bootstrap",
+    "keven",
+    "jesus",
+    "curso",
+    "bootstrap"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "font-awesome": "^4.7.0"
+  }
+}

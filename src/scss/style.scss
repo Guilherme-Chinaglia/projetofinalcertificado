@@ -1,0 +1,15 @@
+@import "../components/bootstrap/scss/bootstrap";
+@import "../components/font-awesome/scss/font-awesome";
+
+//Sidebar
+.sidebar-open{
+	width: 20%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+
+	background-color: #000;
+}
+
