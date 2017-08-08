@@ -1,12 +1,4 @@
-$(function(){
-	
-
-	$('.sidebar-open:after').on('click', function(e){
-
-		console.log(e);
-	});
-
-	$('.js-open-sidebar').on('click', function(){
-		$('.sidebar').addClass('sidebar-open').removeClass('sidebar-close');
-	});
+$("#js-open-sidebar, .logo").click(function(e) {
+	e.preventDefault();
+  	$(".sidebar").toggleClass("is-active");
 });

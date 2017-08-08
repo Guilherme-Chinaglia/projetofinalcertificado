@@ -1,6 +1,19 @@
 @import "../components/bootstrap/scss/bootstrap";
 @import "../components/font-awesome/scss/font-awesome";
 
+//Variaveis Personalizadas
+@import "_custom-variables";
+
+//Placeholders
+@import "_custom-placeholders";
+
+//Body
+
+html{
+
+	box-sizing: border-box;
+}
+
 //Sidebar
 .sidebar{//montar uma media querie para landscape
 	
@@ -8,91 +21,77 @@
 	height: 100vh;
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: -50%;
 	z-index: 1000;
 
-	background-color: $corfundo;
-}
+	background-color: $fundobarralateral;
 
-.sidebar-open{
-	&:after{
-		content: "";
-		width: 80%;
-		position: fixed;
-		top: 0;
-		left: 50%;
-		bottom: 0;
-		z-index: 900;
+	&.is-active{
+		
+		left: 0;
 
-		background-color: rgba(0,0,0,.4);
+		&:after{
+			
+			content: "";
+			width: 50%;
+			position: fixed;
+			top: 0;
+			left: 50%;
+			bottom: 0;
+			z-index: 900;
+
+			background-color: rgba(0,0,0,.4);
+		}
 	}
-
-	.sidebar{
- 
-	}
 }
 
-.sidebar-close{
-
-	display: none;
-}
-
-.nav-item{
+.nav{
 
 	list-style-type: none;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
 
-	li{
+	.nav-dashboard{
 
 		padding: 8px 0;
-		border-bottom: 1px solid $corfundologo;
-
-		&:hover{
-
-			background-color: lighten($corfundo, 10);
-		}
-
-		.nav-link{
-
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-decoration: none;
-			font-size: 1.2rem;
-
-			color: $cortxtmsg;
-
-			&:hover{
-
-				color: #fff;
-			}
-
-			.fa{
-				
-				font-size: 2.8em;
-			}
-		}
-	}
-
-	.dashboard{
-
-		border-left: 2px solid $corbddash;
+		border-bottom: 1px solid $fundologo;
+		border-left: 2px solid $corbordadashboard;
 		position: relative;
 
 		.fa-caret-left{
 
-			position: absolute;
-			top: 30px;
-			right: -2px;
-			font-size: 1rem;
-			color: #fff;
-			
-		}	
+			display: none;
+		}
+
+		&:hover{
+
+			background-color: lighten($fundologo, 10);
+
+			.fa-caret-left{
+
+				display: block;
+				position: absolute;
+				top: 40%;
+				right: 0;
+				font-size: 1.5rem;
+
+				color: #fff;
+			}	
+		}
 	}
 
-	.messages{
+	.nav-messages{
 
-		border-left: 2px solid $corbdmsg;
+		padding: 8px 0;
+		border-bottom: 1px solid $fundologo;
+		border-left: 2px solid $corbordamessages;
 		position: relative;
+
+		.fa-caret-left{
+		
+			display: none;
+		}
 
 		.circ-msg{
 
@@ -111,26 +110,108 @@
 			color: #fff;
 			background-color: $red;
 		}
+
+		&:hover{
+
+			background-color: lighten($fundologo, 10);
+
+			.fa-caret-left{
+
+				display: block;
+				position: absolute;
+				top: 40%;
+				right: 0;
+				font-size: 1.5rem;
+				color: #fff;
+			}	
+		}
 	}
 
-	.analytics{
+	.nav-analytics{
 
-		border-left: 2px solid $corbdanalytic;
+		padding: 8px 0;
+		border-bottom: 1px solid $fundologo;
+		border-left: 2px solid $corbordaanalytics;
+		position: relative;
+
+		.fa-caret-left{
+		
+			display: none;
+		}
+
+		&:hover{
+	
+			background-color: lighten($fundologo, 10);
+
+			.fa-caret-left{
+
+				display: block;
+				position: absolute;
+				top: 40%;
+				right: 0;
+				font-size: 1.5rem;
+				color: #fff;
+			}	
+		}
 	}
 
-	.settings{
+	.nav-settings{
 
-		border-left: 2px solid $corbdsetting;
+		padding: 8px 0;
+		border-bottom: 1px solid $fundologo;
+		border-left: 2px solid $corbordasettings;
+		position: relative;
+
+		.fa-caret-left{
+
+			display: none;
+		}
+
+		&:hover{
+
+			background-color: lighten($fundologo, 10);
+
+			.fa-caret-left{
+
+				display: block;
+				position: absolute;
+				top: 40%;
+				right: 0;
+				font-size: 1.5rem;
+				color: #fff;
+			}	
+		}
+	}
+
+
+	.nav-link{
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-decoration: none;
+		font-size: 1.2rem;
+
+		color: $cortxtmessages;
+
+		.fa{
+			
+			font-size: 2.8em;
+		}
+
+		&:hover{
+
+			color: #fff;
+		}
 	}
 }
 
-
 .logo{
 
-		text-align: center;
-		padding: 1em;
+	text-align: center;
+	padding: 1em;
 
-		background-color: $corfundologo;
+	background-color: $fundologo;
 }
 
 

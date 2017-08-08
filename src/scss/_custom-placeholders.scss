@@ -1,0 +1,19 @@
+%setaindicacao{
+
+	.fa-caret-left{
+
+		
+	}
+
+	&:hover{
+
+		.fa-caret-left{
+
+			
+			position: absolute;
+
+			right: -2px;
+			color: #fff;
+		}	
+	}
+}
