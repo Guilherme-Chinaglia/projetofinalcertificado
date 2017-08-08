@@ -2,14 +2,135 @@
 @import "../components/font-awesome/scss/font-awesome";
 
 //Sidebar
-.sidebar-open{
-	width: 20%;
+.sidebar{//montar uma media querie para landscape
+	
+	width: 50%;
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 900;
+	z-index: 1000;
 
-	background-color: #000;
+	background-color: $corfundo;
 }
+
+.sidebar-open{
+	&:after{
+		content: "";
+		width: 80%;
+		position: fixed;
+		top: 0;
+		left: 50%;
+		bottom: 0;
+		z-index: 900;
+
+		background-color: rgba(0,0,0,.4);
+	}
+
+	.sidebar{
+ 
+	}
+}
+
+.sidebar-close{
+
+	display: none;
+}
+
+.nav-item{
+
+	list-style-type: none;
+
+	li{
+
+		padding: 8px 0;
+		border-bottom: 1px solid $corfundologo;
+
+		&:hover{
+
+			background-color: lighten($corfundo, 10);
+		}
+
+		.nav-link{
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-decoration: none;
+			font-size: 1.2rem;
+
+			color: $cortxtmsg;
+
+			&:hover{
+
+				color: #fff;
+			}
+
+			.fa{
+				
+				font-size: 2.8em;
+			}
+		}
+	}
+
+	.dashboard{
+
+		border-left: 2px solid $corbddash;
+		position: relative;
+
+		.fa-caret-left{
+
+			position: absolute;
+			top: 30px;
+			right: -2px;
+			font-size: 1rem;
+			color: #fff;
+			
+		}	
+	}
+
+	.messages{
+
+		border-left: 2px solid $corbdmsg;
+		position: relative;
+
+		.circ-msg{
+
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			left: 40px;
+			top: 10px;
+			
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			border-radius: 50%;
+			color: #fff;
+			background-color: $red;
+		}
+	}
+
+	.analytics{
+
+		border-left: 2px solid $corbdanalytic;
+	}
+
+	.settings{
+
+		border-left: 2px solid $corbdsetting;
+	}
+}
+
+
+.logo{
+
+		text-align: center;
+		padding: 1em;
+
+		background-color: $corfundologo;
+}
+
 

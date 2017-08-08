@@ -117,7 +117,7 @@ gulp.task('sizereport', function(){
 gulp.task('server', function(){
 
 	browserSync.init({
-		proxy: "localhost/projetocertificado/dist",
+		proxy: "http://localhost/2-kevinbootstrap/certificado/projetofinalcertificado/dist",
 		browser: "firefox"
 	})
 	
