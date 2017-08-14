@@ -10,17 +10,17 @@
 //Placeholders
 @import "_custom-placeholders";
 
+//Custom-mixins
+@import "_custom-mixins";
+
+//Custom-body
+@import "_custom-body";
+
 //Sidebar
 @import "_sidebar-nav";
 
 //Header
 @import "_header";
-
-body{
-
-	font-family: 'Oswald', sans-serif;
-	font-weight: 200;
-}
 
 //Wrapper
 .wrapper{
@@ -38,20 +38,30 @@ body{
 
 	width: 100%;
 
-	-webkit-transform: translate3d(0,0,0);
-	-moz-transform: translate3d(0,0,0);
-	-ms-transform: translate3d(0,0,0);
-	-o-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	-ms-transition: all .3s ease;
-	-o-transition: all .3s ease;
-	transition: all .3s ease;
+	@include displacement;
+	@extend %animate-transition;
+
+	@include media-breakpoint-up(lg) {
+
+		padding: 0 2rem;
+
+		@include media-breakpoint-up(xl) {
+
+			@include displacement(5%);
+			width: 90%;
+			padding: 0;
+		}
+	}
 
 	.row{
 		
 		margin: 0;
+		justify-content: center;
+
+		@include media-breakpoint-up(md) {
+
+				justify-content: space-between;
+			}
 
 		.card-header{
 
@@ -69,10 +79,15 @@ body{
 			margin: auto;
 			height: 70vh;
 			width: 90vw;
+			max-width: 100%;
 			display: flex;
 			align-items: center;
 
+			@include media-breakpoint-up(md) {
 
+				width: 45vw;
+				height: 35vh;
+			}
 		}
 
 		.btn-filter{
@@ -85,22 +100,47 @@ body{
 
 	.visitors-col{
 	
-		margin: 1rem 0;	
+		@extend %card-col-margin;
+
+		@include media-breakpoint-up(md) {
+
+			@include make-col(6);
+			@include make-gutters;
+		}
+
 	}
 
 	.subscriptions-col{
 
-		margin: 1rem 0;
+		@extend %card-col-margin;
+
+			@include media-breakpoint-up(md) {
+
+			@include make-col(6);
+			@include make-gutters;
+		}
 	}
 
 	.messages-col{
 		
-		margin: 1rem 0;
+		@extend %card-col-margin;
+
+			@include media-breakpoint-up(md) {
+
+			@include make-col(6);
+			@include make-gutters;
+		}
 	}
 
 	.overview-col{
 		
-		margin: 1rem 0;
+		@extend %card-col-margin;
+
+			@include media-breakpoint-up(md) {
+
+			@include make-col(6);
+			@include make-gutters;
+		}
 	}
 
 	h2{
@@ -144,11 +184,7 @@ body{
 				height: 25px;
 				margin-right: 0.2em;
 
-				-webkit-border-radius: 100%;
-				-moz-border-radius: 100%;
-				-ms-border-radius: 100%;
-				-o-border-radius: 100%;
-				border-radius: 100%;
+				@extend %border-radius;
 
 				background-color: #c4c4c4;
 			}
@@ -166,6 +202,3 @@ body{
 		}
 	}
 }
-
-
-

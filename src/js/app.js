@@ -44,7 +44,7 @@ new Chart(document.getElementById("subscriptions"), {
         {
           label: "",
           backgroundColor: ["#3cba9f", "#3cba9f","#3cba9f","#3cba9f","#3cba9f","#3cba9f","#3cba9f"],
-          data: [310,150,80,100,200,290,440]
+          data: [110,50,80,100,200,90,140]
         }
       ]
     },

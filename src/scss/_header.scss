@@ -9,6 +9,16 @@
 	color: #fff;
 	background-color: $cormenutopo;
 
+	@include media-breakpoint-up(xl) {
+			
+			justify-content: flex-end;
+
+			.menu{
+
+				display: none;
+			}
+		}
+
 	.menu-hamburguer{
 
 		font-size: 1.5rem;
@@ -26,11 +36,7 @@
 			height: 25px;
 			margin-right: 0.2rem;
 
-			-webkit-border-radius: 100%;
-			-moz-border-radius: 100%;
-			-ms-border-radius: 100%;
-			-o-border-radius: 100%;
-			border-radius: 100%;
+			@extend %border-radius;
 
 			background-color: $corcirclelogin;
 		}
@@ -40,17 +46,23 @@
 		}
 	}
 
-	.support-link{
+	.support{
+		.support-link{
 
-		text-decoration: none;
-		color: #fff;
+			text-decoration: none;
+			color: #fff;
 
-		&:hover{
+			&:hover{
 
-			text-decoration: underline;
+				text-decoration: underline;
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			
+			margin-right: 1.5rem;
 		}
 	}
-
 	.user-link{
 		
 		text-decoration: none;
@@ -62,14 +74,22 @@
 		}
 	}
 
-	.sign-link{
+	.sign{
 
-		text-decoration: none;
-		color: #fff;
+		.sign-link{
 
-		&:hover{
+			text-decoration: none;
+			color: #fff;
 
-			text-decoration: underline;
+			&:hover{
+
+				text-decoration: underline;
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			
+			margin: 0 1rem;
 		}
 	}
 }
