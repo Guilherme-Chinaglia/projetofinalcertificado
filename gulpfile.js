@@ -71,7 +71,8 @@ gulp.task("concat-js", function() {
 	return gulp.src([
 					'./src/components/jquery/dist/jquery.js',
 					'./src/components/tether/dist/js/tether.js',
-					'./src/components/bootstrap/dist/js/bootstrap.js'
+					'./src/components/bootstrap/dist/js/bootstrap.js',
+					'./src/components/chart.js/dist/Chart.js'
 				])
 				.pipe(concat("main.js"))
 				.pipe(uglify())

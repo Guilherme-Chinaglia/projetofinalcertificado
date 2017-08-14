@@ -1,0 +1,75 @@
+//Header
+.header{
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1.5rem 0;
+	
+	color: #fff;
+	background-color: $cormenutopo;
+
+	.menu-hamburguer{
+
+		font-size: 1.5rem;
+	}
+	.user{
+
+		display: flex;
+		align-items: center;
+
+		.circle-login{
+			
+			display: inline-block;	
+
+			width: 25px;
+			height: 25px;
+			margin-right: 0.2rem;
+
+			-webkit-border-radius: 100%;
+			-moz-border-radius: 100%;
+			-ms-border-radius: 100%;
+			-o-border-radius: 100%;
+			border-radius: 100%;
+
+			background-color: $corcirclelogin;
+		}
+
+		.user-seta{
+			margin-left: 0.2rem;
+		}
+	}
+
+	.support-link{
+
+		text-decoration: none;
+		color: #fff;
+
+		&:hover{
+
+			text-decoration: underline;
+		}
+	}
+
+	.user-link{
+		
+		text-decoration: none;
+		color: #fff;
+
+		&:hover{
+
+			text-decoration: underline;
+		}
+	}
+
+	.sign-link{
+
+		text-decoration: none;
+		color: #fff;
+
+		&:hover{
+
+			text-decoration: underline;
+		}
+	}
+}
