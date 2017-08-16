@@ -1,19 +1,22 @@
-%setaindicacao{
+%animate-transition{
+	
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
 
-	.fa-caret-left{
+%border-radius{
 
-		
-	}
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%;
+}
 
-	&:hover{
+%card-col-margin{
 
-		.fa-caret-left{
-
-			
-			position: absolute;
-
-			right: -2px;
-			color: #fff;
-		}	
-	}
+	margin: 1rem 0;
 }
