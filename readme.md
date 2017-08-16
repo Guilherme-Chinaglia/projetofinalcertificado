@@ -10,7 +10,7 @@
 		<li>Bootstrap v4.0.0-alpha.6</li>
 		<li>Chart.js</li>
 	</ul>
-	<h2>Follow this steps and run the commands above in your terminal (Linux) or cmd (Windows):</h2>
+	<h2>Follow this steps and run the commands bellow in your terminal (Linux) or cmd (Windows):</h2>
 	<p>It's necessary to have node.js in your machine: <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
 	<ol>
 		<li>git clone </li>
