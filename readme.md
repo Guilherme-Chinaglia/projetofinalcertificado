@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta charset="UTF-8">
-	<title>Projeto Final - Certificado</title>
-</head>
 <body>
 	<h1>Final Project - Course "Certificação Bootstrap"</h1>
 
@@ -31,4 +25,3 @@
 		<li>run the command  gulp in your terminal/cmd</li>
 	</ol>
 </body>
-</html>
