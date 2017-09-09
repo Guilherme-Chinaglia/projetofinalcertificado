@@ -16,7 +16,7 @@
 		<li>git clone </li>
 		<li>npm install (to install the node_modules path)</li>
 		<li>bower install (to install bower)</li>
-		<li>Inside the archive (gulpfile.js), you have to change the line 121, putting the path where you had save the project in your machine</li>
+		<li>Inside the archive (gulpfile.js), you have to change the line 133, putting the path where you had save the project in your machine</li>
 		<li>run the command  gulp in your terminal/cmd</li>
 	</ol>
 </body>
