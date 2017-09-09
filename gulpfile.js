@@ -114,7 +114,7 @@ gulp.task('sizereport', function(){
 /*
 	Task browserSync (o servidor local da sua máquina deverá estar startado também Ex: wamp, xamp, lamp, mamp ...etc)
 	Verificar documentação do plugin para máquinas sem servidor local
-*/
+
 gulp.task('server', function(){
 
 	browserSync.init({
@@ -122,6 +122,17 @@ gulp.task('server', function(){
 		browser: "firefox"
 	})
 	
+*/
+
+	gulp.task('server', function(){
+
+		browserSync.init({
+
+			server: {
+
+				baseDir: "../projetofinalcertificado/dist"
+			}	
+		});
 
 	//watch para monitorar e avisar sobre os arquivos javascript criados pelo desenvolvedor
 	gulp.watch('src/js/*.js').on('change', function(event){
